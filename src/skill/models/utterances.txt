@@ -16,8 +16,13 @@ AMAZON.HelpIntent help
 AMAZON.StopIntent exit skill
 AMAZON.CancelIntent exit skill
 BeginIntent begin
-OpenDoorOneIntent open door one
-OpenDoorTwoIntent open door two
-OpenDoorThreeIntent open door three
-OpenDoorFourIntent open door four
-OpenDoorFiveIntent open door five
+PeterIntent peter
+FlopsyIntent flopsy
+LettucesIntent lettuces
+CucumbersIntent cucumbers
+CabbagesIntent cabbages
+YesIntent yes
+CucumbersIntent cucumbers
+CabbagesIntent cabbages
+YesIntent yes
+YesIntent yes

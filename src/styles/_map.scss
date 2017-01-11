@@ -155,6 +155,11 @@ scene {
       }
     }
 
+    .virtual {
+        opacity: 0.3;
+
+    }
+
     .title {
       padding: 10px;
       padding: 20px;
@@ -174,6 +179,12 @@ scene {
       position: absolute;
       bottom: 8px;
       margin-left: -14px;
+      z-index: 1;
+    }
+    .btn-link {
+      position: absolute;
+      bottom: 8px;
+      margin-left: 14px;
       z-index: 1;
     }
 

@@ -18,6 +18,11 @@
     this.responses = opts.config.responses
     this.skillName = opts.config.skillName
 
+    window.isLinking = false;
+    window.linkingSourceId = -1;
+
+
+
     var subRoute = riot.route.create()
 
     subRoute( x => {
@@ -40,6 +45,21 @@
     })
 
     window.addEventListener('resize', resize.bind( this ) )
+    window.addEventListener('start_link', startLink.bind( this ) )
+    window.addEventListener('stop_link', stopLink.bind( this ) )
+
+    function startLink ( e ) {
+console.log("start link event");
+document.getElementById("$mapContainer").style.background="#999";
+
+}
+    function stopLink ( e ) {
+console.log("stop link event");
+document.getElementById("$mapContainer").style.background="";
+}
+
+
+
 
     function resize ( e ) {
       var width = this.$start.querySelector('.row > scene').clientWidth

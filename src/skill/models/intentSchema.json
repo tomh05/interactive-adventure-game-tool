@@ -31,19 +31,22 @@
       "intent": "BeginIntent"
     },
     {
-      "intent": "OpenDoorOneIntent"
+      "intent": "PeterIntent"
     },
     {
-      "intent": "OpenDoorTwoIntent"
+      "intent": "FlopsyIntent"
     },
     {
-      "intent": "OpenDoorThreeIntent"
+      "intent": "LettucesIntent"
     },
     {
-      "intent": "OpenDoorFourIntent"
+      "intent": "CucumbersIntent"
     },
     {
-      "intent": "OpenDoorFiveIntent"
+      "intent": "CabbagesIntent"
+    },
+    {
+      "intent": "YesIntent"
     }
   ]
 }

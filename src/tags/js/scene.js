@@ -7,7 +7,7 @@
     tagger(window.riot);
   }
 })(function(riot) {
-riot.tag2('scene', '<div class="cell {opts.scene.color}{opts.scene.isHidden ? \' is-hidden\' : \'\'}"> <button type="button" onclick="{onClickDestroyOption}" if="{opts.option !== \'START\'}" class="btn btn-circle btn-remove"> </button> <div class="option" onclick="{onClickEditOption}"> {opts.option} </div> <div class="title" onclick="{onClickEditScene}"> {opts.scene.card.title} </div> <button type="button" onclick="{onClickAddOption}" class="btn btn-circle btn-add"> </button> </div> <div class="row" if="{children.length}"> <scene each="{children}" scene="{scene}" scenes="{scenes}" option="{option}"></scene> </div>', '', 'id="scene-{opts.scene.id}" class="{\'is-selected\': isSelected}"', function(opts) {
+riot.tag2('scene', '<div class="cell {opts.scene.color}{opts.scene.isHidden ? \' is-hidden\' : \'\'}" onclick="{onClickDestination}"> <button type="button" onclick="{onClickDestroyOption}" if="{opts.option !== \'START\'}" class="btn btn-circle btn-remove"> </button> <div class="option " onclick="{onClickEditOption}"> {opts.option} </div> <div class="title {opts.type}" onclick="{onClickEditScene}"> {opts.scene.card.title} </div> <button type="button" if="{opts.type !== \'virtual\'}" onclick="{onClickAddOption}" class="btn btn-circle btn-add"> </button> <button type="button" if="{opts.type !== \'virtual\'}" onclick="{onClickLinkOption}" class="btn btn-circle btn-link"> </button> </div> <div class="row" if="{children.length && opts.type !== \'virtual\'}"> <scene each="{children}" scene="{scene}" scenes="{scenes}" option="{option}" type="{type}"></scene> </div>', '', 'id="scene-{opts.scene.id}" class="{\'is-selected\': isSelected}"', function(opts) {
 var _this = this;
 
 this.children = [];
@@ -23,7 +23,8 @@ this.on('update', function (x) {
         return scene.id === option.sceneId;
       }),
       option: option.utterances[0],
-      scenes: opts.scenes
+      scenes: opts.scenes,
+      type: option.type
     };
   });
 
@@ -53,8 +54,14 @@ this.on('update', function (x) {
 
 this.onClickDestroyOption = function (e) {
   e.stopPropagation();
-  removeScene(e.item.scene);
+  console.log("removing", opts.type);
+  console.log("removing", opts);
+  if (opts.type == 'virtual') {} else {
+    removeScene(e.item.scene);
+  }
   var options = _this.parent.opts.scene.options;
+  console.log("removing", options);
+  console.log("removing", e);
   var index = options.findIndex(function (option) {
     return option.sceneId === e.item.scene.id;
   });
@@ -63,18 +70,66 @@ this.onClickDestroyOption = function (e) {
 };
 
 this.onClickEditOption = function (e) {
-  e.stopPropagation();
-  if (!_this.scene && opts.scene) {
-    riot.route('/scene:START/card');
-  } else {
-    var index = _this.parent.children.indexOf(e.item);
-    riot.route('/scene:' + _this.parent.opts.scene.id + '/option:' + index);
+  if (!window.isLinking) {
+    e.stopPropagation();
+    if (!_this.scene && opts.scene) {
+      riot.route('/scene:START/card');
+    } else {
+      var index = _this.parent.children.indexOf(e.item);
+      riot.route('/scene:' + _this.parent.opts.scene.id + '/option:' + index);
+    }
   }
 };
 
 this.onClickEditScene = function (e) {
+  if (!window.isLinking) {
+    e.stopPropagation();
+    riot.route('/scene:' + opts.scene.id + '/card');
+  }
+};
+
+this.onClickLinkOption = function (e) {
+
+  console.log("pre islinking state", window.isLinking);
+  if (!window.isLinking) {
+    e.stopPropagation();
+    window.linkingSourceId = e.item.scene.id;
+    window.isLinking = true;
+    console.log("clicking source id", window.linkingSourceId);
+    console.log("parent is", parent);
+    console.log("islinking state", window.isLinking);
+    dispatchEvent(new Event('start_link'));
+  }
+};
+
+this.onClickDestination = function (e) {
+
   e.stopPropagation();
-  riot.route('/scene:' + opts.scene.id + '/card');
+
+  console.log("dest islinking state", window.isLinking);
+  if (window.isLinking) {
+    destinationSceneId = e.item.scene.id;
+    console.log("destination source id", destinationSceneId);
+    console.log("to source id", window.linkingSourceId);
+
+    var sourceScene = opts.scenes.find(function (scene) {
+      return scene.id === Number(window.linkingSourceId);
+    });
+    var destinationScene = opts.scenes.find(function (scene) {
+      return scene.id === Number(destinationSceneId);
+    });
+
+    var option = {
+      sceneId: destinationSceneId,
+      utterances: ['open door'],
+      type: 'virtual'
+    };
+
+    sourceScene.options.push(option);
+
+    dispatchEvent(new Event('stop_link'));
+    window.isLinking = false;
+  }
 };
 
 this.onClickAddOption = function (e) {

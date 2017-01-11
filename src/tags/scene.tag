@@ -1,6 +1,8 @@
 <scene id="scene-{ opts.scene.id }" class={ 'is-selected': isSelected }>
 
-  <div class="cell { opts.scene.color }{ opts.scene.isHidden ? ' is-hidden' : '' }">
+  <div class="cell { opts.scene.color }{ opts.scene.isHidden ? ' is-hidden' : '' }" 
+onclick= { onClickDestination}
+>
 
     <button type="button"
             onclick={ onClickDestroyOption }
@@ -8,35 +10,44 @@
             class="btn btn-circle btn-remove">
     </button>
 
-    <div class="option"
+    <div class="option "
          onclick={ onClickEditOption }>
       { opts.option }
     </div>
 
-    <div class="title"
+    <div class="title {opts.type}"
          onclick={ onClickEditScene }>
       { opts.scene.card.title }
     </div>
 
     <button type="button"
+            if={ opts.type !== 'virtual' }
             onclick={ onClickAddOption }
             class="btn btn-circle btn-add">
+    </button>
+
+    <button type="button"
+            if={ opts.type !== 'virtual' }
+            onclick={ onClickLinkOption }
+            class="btn btn-circle btn-link">
     </button>
 
   </div>
 
   <div class="row"
-       if={ children.length }>
+       if={ children.length && opts.type !== 'virtual'  }>
     <scene each={ children }
            scene={ scene }
            scenes={ scenes }
-           option={ option } ></scene>
+           option={ option }
+           type={ type } ></scene>
   </div>
 
   <script type="es6">
 
     this.children = []
     this.isSelected = false
+
 
     this.on('update', x => {
       if ( ! opts.scene ) return
@@ -46,7 +57,8 @@
         return {
           scene: opts.scenes.find( scene => scene.id === option.sceneId ),
           option: option.utterances[0],
-          scenes: opts.scenes
+          scenes: opts.scenes,
+          type: option.type,
         }
       })
 
@@ -75,28 +87,89 @@
 
     this.onClickDestroyOption = e => {
       e.stopPropagation()
-      removeScene( e.item.scene )
+          console.log("removing",opts.type);
+          console.log("removing",opts);
+          if (opts.type == 'virtual') { 
+
+          } else {
+              removeScene( e.item.scene )
+          } 
       var options = this.parent.opts.scene.options
+          console.log("removing",options);
+          console.log("removing",e);
       var index = options.findIndex( option => option.sceneId === e.item.scene.id )
       options.splice( index, 1 )
       riot.route('/')
     }
 
     this.onClickEditOption = e => {
+    if (!window.isLinking) {
       e.stopPropagation()
       if ( ! this.scene && opts.scene ) {
         riot.route('/scene:START/card')
-      }
-      else {
+      } else {
         var index = this.parent.children.indexOf( e.item )
         riot.route('/scene:' + this.parent.opts.scene.id + '/option:' + index )
       }
     }
+}
 
     this.onClickEditScene = e => {
+    if (!window.isLinking) {
       e.stopPropagation()
       riot.route('/scene:' + opts.scene.id + '/card')
     }
+}
+
+
+this.onClickLinkOption = e => {
+
+    console.log("pre islinking state",window.isLinking);
+    if (!window.isLinking) {
+        e.stopPropagation()
+            window.linkingSourceId = e.item.scene.id;
+        window.isLinking = true;
+        console.log("clicking source id",window.linkingSourceId);
+        console.log("parent is",parent);
+        console.log("islinking state",window.isLinking);
+        dispatchEvent(new Event('start_link'));
+    }
+
+}
+
+this.onClickDestination = e => {
+
+      e.stopPropagation()
+
+    console.log("dest islinking state",window.isLinking);
+    if (window.isLinking) {
+        destinationSceneId = e.item.scene.id;
+        console.log("destination source id",destinationSceneId);
+        console.log("to source id",window.linkingSourceId);
+
+        //var parentSceneId = opts.scene ? opts.scene.id : 0;
+        //var parentScene = opts.scenes.find( scene => scene.id === Number( parentSceneId ) )
+
+
+        var sourceScene = opts.scenes.find( scene => scene.id === Number( window.linkingSourceId ) )
+        var destinationScene = opts.scenes.find( scene => scene.id === Number( destinationSceneId ) )
+
+        var option = {
+            sceneId: destinationSceneId,
+            utterances: [
+                'open door'
+            ],
+            type: 'virtual'
+        }
+
+        sourceScene.options.push( option )
+
+        dispatchEvent(new Event('stop_link'));
+        window.isLinking = false;
+    }
+
+}
+
 
     this.onClickAddOption = e => {
       e.stopPropagation()
@@ -137,6 +210,7 @@
 
       riot.route('/scene:' + parentScene.id + '/option:' + ( parentScene.options.length -1 ) )
     }
+
 
     function removeScene ( scene ) {
       if ( ! scene ) return // exit

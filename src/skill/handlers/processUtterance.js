@@ -35,8 +35,11 @@ function processUtterance ( intent, session, request, response, utterance ) {
     return ( option.utterances.indexOf( utterance ) > -1 )
   })
 
+      console.log("current scene:",currentScene);
+      console.log("utterance:",utterance);
   // option found
   if ( option ) {
+      console.log("found option!",option);
     var nextScene = utils.findNextScene( currentScene, option );
     session.attributes.breadcrumbs.push( currentScene.id )
     session.attributes.currentSceneId = nextScene.id

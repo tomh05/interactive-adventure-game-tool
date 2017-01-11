@@ -6,7 +6,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Welcome",
-      "text": "Welcome to my Alexa Skill. To learn how to use this skill, say \"Help\".",
+      "text": "Peter Rabbit, by Beatrix Potter. Are you ready to begin?",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -14,7 +14,7 @@
       }
     },
     "voice": {
-      "intro": "Welcome to my Alexa Skill. To learn how to use this skill, say \"Help\".",
+      "intro": "Peter Rabbit, by Beatrix Potter. Are you ready to begin?",
       "prompt": "When you are ready, say \"Begin\"."
     },
     "options": [
@@ -33,7 +33,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Welcome",
-      "text": "You enter a room with three doors each with a distinct number on it. Which door would you like to open?",
+      "text": "",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -41,64 +41,33 @@
       }
     },
     "voice": {
-      "intro": "You enter a room with three doors, each with a distinct number on it. Which door would you like to open?",
+      "intro": "Once upon a time there were four little rabbits, and their names were\nFlopsy, Mopsy, Cotton-tail and Peter.\n\n\nThey lived with their mother in a sand-bank, underneath the root of a\nvery big fir tree.\n\n\"Now, my dears,\" said old Mrs. Rabbit one morning, \"You may go into\nthe fields or down the lane, but don't go into Mr. McGregor's garden.\n\nYour father had an accident there; he was put in a pie by Mrs.\nMcGregor.\"\n\nNow run along and don't get into mischief. I am going out.\"\n\nThen old Mrs. Rabbit took a basket and her umbrella and went through\nthe wood to the baker's.\n\nDo you want to hear about flopsy or about peter?",
       "prompt": ""
     },
     "options": [
       {
+        "sceneId": 2,
         "utterances": [
-          "open door 1"
-        ],
-        "sceneId": 2
+          "peter"
+        ]
       },
       {
+        "sceneId": 3,
         "utterances": [
-          "open door 2"
-        ],
-        "sceneId": 3
-      },
-      {
-        "utterances": [
-          "open door 3"
-        ],
-        "sceneId": 4
-      },
-      {
-        "utterances": [
-          "open door 4"
-        ],
-        "sceneId": 5
+          "flopsy"
+        ]
       }
     ]
   },
   {
     "id": 2,
-    "color": "red",
+    "color": "default",
     "isHidden": false,
+    "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "You lose",
-      "text": "Better luck next time.",
-      "prompt": "If you would like to play again say, \"start again.\" Otherwise you can say \"exit skill.\"",
-      "image": {
-        "largeImageUrl": null,
-        "smallImageUrl": null
-      }
-    },
-    "voice": {
-      "intro": "You lose. Better luck next time.",
-      "prompt": "If you would like to play again say, \"start again.\" Otherwise you can say \"exit skill.\""
-    },
-    "options": []
-  },
-  {
-    "id": 3,
-    "color": "yellow",
-    "isHidden": false,
-    "readPreviousOptions": true,
-    "card": {
-      "title": "Locked Door",
-      "text": "This door is locked.",
+      "title": "Peter Enters Garden",
+      "text": "You enter a room.",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -106,39 +75,104 @@
       }
     },
     "voice": {
-      "intro": "This door is locked. Maybe you should try one of the other doors.",
+      "intro": "Now Peter who was very naughty, ran straight away to Mr. McGregor's\ngarden and squeezed under the gate!\n\nHe saw a huge amount of juicy vegetables growing - lettuces, cucumbers and cabbages. Which do you think he went to eat first?",
       "prompt": ""
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 4,
+        "utterances": [
+          "lettuces"
+        ]
+      },
+      {
+        "sceneId": 5,
+        "utterances": [
+          "cucumbers"
+        ]
+      },
+      {
+        "sceneId": 6,
+        "utterances": [
+          "cabbages"
+        ]
+      }
+    ]
   },
   {
-    "id": 4,
-    "color": "green",
+    "id": 3,
+    "color": "default",
     "isHidden": false,
+    "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "You win",
-      "text": "Congratulations, you've beat my skill!",
-      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\"",
+      "title": "Good Rabbits",
+      "text": "You enter a room.",
+      "prompt": "",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
       }
     },
     "voice": {
-      "intro": "Congratulations, you've beat my skill!",
-      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\""
+      "intro": "Flopsy, Mopsy and Cotton-tail who were good little bunnies went down the lane together to gather blackberries. Would you like to hear about peter now?",
+      "prompt": ""
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 2,
+        "utterances": [
+          "yes"
+        ],
+        "type": "virtual"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Eating Lettuces",
+      "text": "You enter a room.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "Peter first hopped over to the lettuces and sniffed them. They smelt so fresh! He crunched his teeth into them and gobbled down a whole lettuce.\n\nOnce he had had his fill, he spotted over at the other side of the garden a patch of cucumbers and cabbages. Which one do you think he should check first?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 5,
+        "utterances": [
+          "cucumbers"
+        ],
+        "type": "virtual"
+      },
+      {
+        "sceneId": 6,
+        "utterances": [
+          "cabbages"
+        ],
+        "type": "virtual"
+      }
+    ]
   },
   {
     "id": 5,
     "color": "default",
-    "isHidden": true,
+    "isHidden": false,
+    "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "Secret Room",
-      "text": "Congratulations, you've found a secret room. You look around and see a single door with a star on it.",
+      "title": "Eating Cucumbers",
+      "text": "You enter a room.",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -146,15 +180,16 @@
       }
     },
     "voice": {
-      "intro": "Congratulations, you've found a secret room. You look around and see a single door with a star on it.",
+      "intro": "Peter hopped over to the cucumbers - they were perfectly ripe! Snapping the stalk off with his teeth, he opened his mouth as wide as it could go and tore into the cucumber. Delicious!\n\nWhen he was full, he spotted some cabbages in the neighbouring patch. Do you think he should go and test those, too?",
       "prompt": ""
     },
     "options": [
       {
         "sceneId": 6,
         "utterances": [
-          "open door 5"
-        ]
+          "yes"
+        ],
+        "type": "virtual"
       }
     ]
   },
@@ -165,17 +200,45 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "Room",
-      "text": "You win!",
-      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\"",
+      "title": "Eating Cabbages",
+      "text": "You enter a room.",
+      "prompt": "",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
       }
     },
     "voice": {
-      "intro": "You win!",
-      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\""
+      "intro": "Peter hopped up to the cabbages and tucked in! He ate two hole cabbages - a big meal for such a little rabbit!\nPeter felt satisfied. His belly was so full he had to hop carefully round the rest of the garden not to upset it.\n\nBut round the end of a cabbage patch, whom should he meet but Mr.\nMcGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages,\nbut he jumped up and ran after Peter, waving a rake and calling out\n\"Stop thief!\"\nDo you think peter should make a run for it?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 7,
+        "utterances": [
+          "yes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Room",
+      "text": "You enter a room.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "This is the last point in story for now.",
+      "prompt": ""
     },
     "options": []
   }
