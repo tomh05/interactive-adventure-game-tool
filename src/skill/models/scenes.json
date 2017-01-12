@@ -14,7 +14,7 @@
       }
     },
     "voice": {
-      "intro": "Peter Rabbit, <break time=\"1000ms\"/>by Beatrix Potter.<break time=\"1000ms\"/>",
+      "intro": "Peter Rabbit, <break time=\"500ms\"/>by Beatrix Potter.<break time=\"1000ms\"/>",
       "prompt": "Are you ready to begin?"
     },
     "options": [
