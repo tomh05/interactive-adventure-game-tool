@@ -46,7 +46,7 @@ function buildResponse ( scene ){
       type: AlexaSkill.SPEECH_OUTPUT_TYPE.SSML,
       ssml: '<speak>' +
             scene.voice.intro.trim() +
-            '<break time="200ms"/>' +
+            '<break time="300ms"/>' +
             voicePrompt +
             '</speak>'
     },
@@ -62,7 +62,7 @@ function buildResponse ( scene ){
 
     cardTitle:  scene.card.title || config.skillName,
     cardOutput: scene.card.text.trim() +
-              ( scene.card.text.trim() && cardPrompt ? ' ' : '' ) +
+              ( scene.card.text.trim() && cardPrompt ? '\n\n' : '' ) +
                 cardPrompt,
 
     cardImage: scene.card.image || null

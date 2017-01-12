@@ -3,8 +3,9 @@ UnrecognizedIntent ThisIsPurposlyNonSense ThisIsPurposlyNonSense
 UnrecognizedIntent ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense
 UnrecognizedIntent ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense
 UnrecognizedIntent ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense
-ResetStateIntent reset skill
 ResetStateIntent start again
+ResetStateIntent start from the beginning
+ResetStateIntent reset skill
 ResetStateIntent reset
 RestoreStateIntent resume skill
 RestoreStateIntent resume
@@ -13,16 +14,110 @@ RepeatSceneIntent repeat scene
 RepeatSceneIntent repeat
 GoBackIntent go back
 AMAZON.HelpIntent help
-AMAZON.StopIntent exit skill
-AMAZON.CancelIntent exit skill
-BeginIntent begin
+AMAZON.StopIntent exit story
+AMAZON.StopIntent goodbye
+AMAZON.CancelIntent exit story
+YesIntent yes
 PeterIntent peter
 FlopsyIntent flopsy
 LettucesIntent lettuces
-CucumbersIntent cucumbers
+RadishesIntent radishes
 CabbagesIntent cabbages
 YesIntent yes
-CucumbersIntent cucumbers
+RadishesIntent radishes
 CabbagesIntent cabbages
+YesIntent yes
+YesIntent yes
+NoIntent no
+HideIntent hide
+HideIntent find a place to hide
+RunIntent run
+RunIntent make a run for it
+NoIntent no
+YesIntent yes
+YesIntent yes
+YesIntent yes
+NoIntent No
+CryForHelpIntent cry for help
+CryForHelpIntent cry for someone
+WriggleFreeIntent wriggle free
+WriggleFreeIntent try to wriggle free
+NoIntent no
+YesIntent yes
+DoorIntent door
+DoorIntent the door
+DoorIntent the door in the wall
+DoorIntent the door in the garden wall
+DoorIntent try the door in the wall
+DoorIntent try the door in the garden wall
+DoorIntent try to open the door
+DoorIntent try to open the door in the wall
+DoorIntent try to open the door in the garden wall
+GardenIntent garden
+GardenIntent the garden
+GardenIntent across the garden
+GardenIntent go across the garden
+GardenIntent head across the garden
+ToolShedIntent tool shed
+ToolShedIntent the tool shed
+ToolShedIntent back to the tool shed
+ToolShedIntent go back to the tool shed
+ToolShedIntent head back to the tool shed
+ToolShedIntent head to the tool shed
+YesIntent yes
+DoorIntent door
+DoorIntent the door
+DoorIntent the door in the wall
+DoorIntent the door in the garden wall
+DoorIntent try the door in the wall
+DoorIntent try the door in the garden wall
+DoorIntent try to open the door
+DoorIntent try to open the door in the wall
+DoorIntent try to open the door in the garden wall
+GardenIntent garden
+GardenIntent the garden
+GardenIntent across the garden
+GardenIntent go across the garden
+GardenIntent head across the garden
+ToolShedIntent tool shed
+ToolShedIntent the tool shed
+ToolShedIntent back to the tool shed
+ToolShedIntent go back to the tool shed
+ToolShedIntent head back to the tool shed
+ToolShedIntent head to the tool shed
+DoorIntent door
+DoorIntent the door
+DoorIntent the door in the wall
+DoorIntent the door in the garden wall
+DoorIntent try the door in the wall
+DoorIntent try the door in the garden wall
+DoorIntent try to open the door
+DoorIntent try to open the door in the wall
+DoorIntent try to open the door in the garden wall
+GardenIntent garden
+GardenIntent the garden
+GardenIntent across the garden
+GardenIntent go across the garden
+GardenIntent head across the garden
+ToolShedIntent tool shed
+ToolShedIntent the tool shed
+ToolShedIntent back to the tool shed
+ToolShedIntent go back to the tool shed
+ToolShedIntent head back to the tool shed
+ToolShedIntent head to the tool shed
+GardenIntent garden
+GardenIntent the garden
+GardenIntent across the garden
+GardenIntent go across the garden
+GardenIntent head across the garden
+ToolShedIntent tool shed
+ToolShedIntent the tool shed
+ToolShedIntent back to the tool shed
+ToolShedIntent go back to the tool shed
+ToolShedIntent head back to the tool shed
+ToolShedIntent head to the tool shed
+YesIntent yes
+YesIntent yes
+NoIntent no
 YesIntent yes
 YesIntent yes

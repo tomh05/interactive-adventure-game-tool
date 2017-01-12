@@ -7,8 +7,9 @@
   "dynamoRegion": "us-east-1",
   "commands": {
     "ResetStateIntent": [
-      "reset skill",
       "start again",
+      "start from the beginning",
+      "reset skill",
       "reset"
     ],
     "RestoreStateIntent": [
@@ -29,10 +30,11 @@
       "help"
     ],
     "AMAZON.StopIntent": [
-      "exit skill"
+      "exit story",
+      "goodbye"
     ],
     "AMAZON.CancelIntent": [
-      "exit skill"
+      "exit story"
     ]
   },
   "responses": {
@@ -52,7 +54,7 @@
       },
       "voice": {
         "intro": "I have found your previous saved progress.",
-        "prompt": "To continue from where you left off, say \"Resume Skill\". Otherwise, say \"Reset Skill\"."
+        "prompt": "To continue from where you left off, say \"Resume\". Otherwise, say \"start from the beginning\"."
       }
     },
     "unrecognized": {
@@ -70,7 +72,7 @@
         }
       },
       "voice": {
-        "intro": "My apologies, please repeat your command.",
+        "intro": "Sorry, I didn't understand what you said. Please say again.",
         "prompt": ""
       }
     },
@@ -100,7 +102,7 @@
       "readPreviousOptions": false,
       "card": {
         "title": "Good bye",
-        "text": "Thank you for using My Alexa Skill.",
+        "text": "Thank you for reading along with me.",
         "prompt": "",
         "image": {
           "largeImageUrl": null,
@@ -108,7 +110,7 @@
         }
       },
       "voice": {
-        "intro": "Thank you for using My Alexa Skill.",
+        "intro": "Thank you for listening!",
         "prompt": "Goodbye."
       }
     }

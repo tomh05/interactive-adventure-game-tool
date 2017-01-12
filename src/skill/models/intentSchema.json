@@ -28,7 +28,7 @@
       "intent": "AMAZON.CancelIntent"
     },
     {
-      "intent": "BeginIntent"
+      "intent": "YesIntent"
     },
     {
       "intent": "PeterIntent"
@@ -40,13 +40,34 @@
       "intent": "LettucesIntent"
     },
     {
-      "intent": "CucumbersIntent"
+      "intent": "RadishesIntent"
     },
     {
       "intent": "CabbagesIntent"
     },
     {
-      "intent": "YesIntent"
+      "intent": "NoIntent"
+    },
+    {
+      "intent": "HideIntent"
+    },
+    {
+      "intent": "RunIntent"
+    },
+    {
+      "intent": "CryForHelpIntent"
+    },
+    {
+      "intent": "WriggleFreeIntent"
+    },
+    {
+      "intent": "DoorIntent"
+    },
+    {
+      "intent": "GardenIntent"
+    },
+    {
+      "intent": "ToolShedIntent"
     }
   ]
 }
