@@ -39,10 +39,12 @@
       }
 
       this.saveConfig = e => {
+toastr.info(' Saving...' ,{timeOut: 0});
         riot.route('/save')
       }
 
       this.uploadConfig = e => {
+toastr.info(' Uploading...' ,{timeOut: 0});
         riot.route('/upload')
       }
 

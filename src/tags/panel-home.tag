@@ -121,6 +121,10 @@
     </div>
   </collapsible>
 
+<p>Paste the contents of the files below into the relevent parts of the Skill's Interaction Model:</p>
+<p><a href="/skill/models/intentschema.json" target="_blank">☞ Intent Schema</a></p>
+<p><a href="/skill/models/utterances.txt" target="_blank">☞ Sample Utterances</a></p>
+
   <script type="es6">
 
     this.commands = []

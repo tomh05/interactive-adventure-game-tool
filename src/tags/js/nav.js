@@ -18,10 +18,12 @@ this.help = function (e) {
 };
 
 this.saveConfig = function (e) {
+  toastr.info(' Saving...', { timeOut: 0 });
   riot.route('/save');
 };
 
 this.uploadConfig = function (e) {
+  toastr.info(' Uploading...', { timeOut: 0 });
   riot.route('/upload');
 };
 });

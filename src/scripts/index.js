@@ -84,8 +84,13 @@ function save ( upload ) {
   function onReadyStateChange() {
     if ( httpRequest.readyState === XMLHttpRequest.DONE ) {
       if ( httpRequest.status === 200 ) {
+
+          toastr.remove();
+          toastr.success(upload? 'Uploaded':' Saved' ,{timeOut: 500});
         flashMessage('success', upload ? 'Uploaded' : 'Saved' )
       } else {
+          toastr.remove();
+          toastr.error(' Upload failed. Consult your terminal window...' ,{timeOut: 800});
         flashMessage('error', ( upload ? 'Upload ' : 'Save ' ) + 'Error. Consult your terminal window.')
       }
     }

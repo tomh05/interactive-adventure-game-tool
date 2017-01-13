@@ -56,5 +56,8 @@
       "riot": "npm:riot@^2.3.17",
       "systemjs-plugin-json": "npm:systemjs-plugin-json@^0.1.0"
     }
+  },
+  "dependencies": {
+    "toastr": "^2.1.2"
   }
 }

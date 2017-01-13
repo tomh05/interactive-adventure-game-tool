@@ -47,10 +47,12 @@ window.addEventListener('start_link', startLink.bind(this));
 window.addEventListener('stop_link', stopLink.bind(this));
 
 function startLink(e) {
+  toastr.info(' To cancel linking, click here.', 'Click the scene you want to link to.', { timeOut: 0 });
   console.log("start link event");
-  document.getElementById("$mapContainer").style.background = "#999";
+  document.getElementById("$mapContainer").style.background = "#b7943c";
 }
 function stopLink(e) {
+  toastr.clear();
   console.log("stop link event");
   document.getElementById("$mapContainer").style.background = "";
 }

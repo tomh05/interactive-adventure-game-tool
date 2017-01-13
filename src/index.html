@@ -6,6 +6,9 @@
   <title></title>
   <link rel="stylesheet" href="/styles/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="/styles/toastr.min.css" rel="stylesheet"/>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="/scripts/toastr.min.js"></script>
 </head>
 <body>
 
@@ -19,6 +22,25 @@
   <script src="jspm_packages/system.js"></script>
   <script src="scripts/systemjs.config.js"></script>
   <script>
+      toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-center",
+  "preventDuplicates": false,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "0",
+  "extendedTimeOut": "0",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+toastr.options.onclick = function() { window.isLinking = false;
+        dispatchEvent(new Event('stop_link'));
+        }
       System.import('scripts/index');
   </script>
 </body>
