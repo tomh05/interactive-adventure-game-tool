@@ -15,6 +15,7 @@ this.isSelected = false;
 
 this.on('update', function (x) {
   if (!opts.scene) return;
+  if (opts.type == 'virtual') return;
 
   _this.isSelected = false;
   _this.children = opts.scene.options.map(function (option) {
@@ -54,14 +55,10 @@ this.on('update', function (x) {
 
 this.onClickDestroyOption = function (e) {
   e.stopPropagation();
-  console.log("removing", opts.type);
-  console.log("removing", opts);
   if (opts.type == 'virtual') {} else {
     removeScene(e.item.scene);
   }
   var options = _this.parent.opts.scene.options;
-  console.log("removing", options);
-  console.log("removing", e);
   var index = options.findIndex(function (option) {
     return option.sceneId === e.item.scene.id;
   });
@@ -90,7 +87,6 @@ this.onClickEditScene = function (e) {
 
 this.onClickLinkOption = function (e) {
 
-  console.log("pre islinking state", window.isLinking);
   if (!window.isLinking) {
     e.stopPropagation();
     window.linkingSourceId = e.item.scene.id;

@@ -21,12 +21,20 @@ YesIntent yes
 PeterIntent peter
 FlopsyIntent flopsy
 LettucesIntent lettuces
+LettucesIntent he should eat lettuces
+LettucesIntent the lettuces
+RadishesIntent radishes
+RadishesIntent he should eat radishes
+RadishesIntent the radishes
+CabbagesIntent cabbages
+CabbagesIntent the cabbages
+CabbagesIntent he should eat the cabbages
+YesIntent yes
+NoIntent no
 RadishesIntent radishes
 CabbagesIntent cabbages
-YesIntent yes
-RadishesIntent radishes
 CabbagesIntent cabbages
-YesIntent yes
+LettucesIntent lettuces
 YesIntent yes
 NoIntent no
 HideIntent hide
@@ -36,6 +44,7 @@ RunIntent make a run for it
 NoIntent no
 YesIntent yes
 YesIntent yes
+NoIntent no
 YesIntent yes
 NoIntent No
 CryForHelpIntent cry for help
@@ -65,6 +74,7 @@ ToolShedIntent go back to the tool shed
 ToolShedIntent head back to the tool shed
 ToolShedIntent head to the tool shed
 YesIntent yes
+NoIntent no
 DoorIntent door
 DoorIntent the door
 DoorIntent the door in the wall
@@ -116,8 +126,24 @@ ToolShedIntent back to the tool shed
 ToolShedIntent go back to the tool shed
 ToolShedIntent head back to the tool shed
 ToolShedIntent head to the tool shed
-YesIntent yes
+ToolShedIntent tool shed
+ToolShedIntent the tool shed
+ToolShedIntent back to the tool shed
+ToolShedIntent go back to the tool shed
+ToolShedIntent head back to the tool shed
+ToolShedIntent head to the tool shed
+DoorIntent door
+DoorIntent the door
+DoorIntent the door in the wall
+DoorIntent the door in the garden wall
+DoorIntent try the door in the wall
+DoorIntent try the door in the garden wall
+DoorIntent try to open the door
+DoorIntent try to open the door in the wall
+DoorIntent try to open the door in the garden wall
 YesIntent yes
 NoIntent no
 YesIntent yes
 YesIntent yes
+YesIntent yes
+NoIntent no

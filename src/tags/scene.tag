@@ -51,6 +51,7 @@ onclick= { onClickDestination}
 
     this.on('update', x => {
       if ( ! opts.scene ) return
+      if ( opts.type == 'virtual' ) return
 
       this.isSelected = false
       this.children = opts.scene.options.map( option => {
@@ -87,16 +88,11 @@ onclick= { onClickDestination}
 
     this.onClickDestroyOption = e => {
       e.stopPropagation()
-          console.log("removing",opts.type);
-          console.log("removing",opts);
           if (opts.type == 'virtual') { 
-
           } else {
               removeScene( e.item.scene )
           } 
       var options = this.parent.opts.scene.options
-          console.log("removing",options);
-          console.log("removing",e);
       var index = options.findIndex( option => option.sceneId === e.item.scene.id )
       options.splice( index, 1 )
       riot.route('/')
@@ -124,7 +120,6 @@ onclick= { onClickDestination}
 
 this.onClickLinkOption = e => {
 
-    console.log("pre islinking state",window.isLinking);
     if (!window.isLinking) {
         e.stopPropagation()
             window.linkingSourceId = e.item.scene.id;

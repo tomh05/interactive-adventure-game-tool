@@ -14,7 +14,7 @@
       }
     },
     "voice": {
-      "intro": "Peter Rabbit, <break time=\"500ms\"/>by Beatrix Potter.<break time=\"1000ms\"/>",
+      "intro": "Peter Rabbit, <break time=\"200ms\"/>by Beatrix Potter.<break time=\"500ms\"/>Open the Alexa companion app to see the pictures and read along.<break time=\"1000ms\"/>",
       "prompt": "Are you ready to begin?"
     },
     "options": [
@@ -33,7 +33,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Once upon a time...",
-      "text": "Once upon a time there were four little rabbits, and their names were Flopsy, Mopsy, Cotton-tail and Peter. \n They lived with their mother in a sand-bank, underneath the root of a very big fir tree.\n\n\"Now, my dears,\" said old Mrs. Rabbit one morning, \"You may go into the fields or down the lane, but don't go into Mr. McGregor's garden.\n\nYour father had an accident there; he was put in a pie by Mrs. McGregor.\"\n\nNow run along and don't get into mischief. I am going out.\"\n\n Then old Mrs. Rabbit took a basket and her umbrella and went through the wood to the baker's.",
+      "text": " Once upon a time there were four little rabbits, and their names were Flopsy, Mopsy, Cotton-tail and Peter. \n They lived with their mother in a sand-bank, underneath the root of a very big fir tree.\n\n\"Now, my dears,\" said old Mrs. Rabbit one morning, \"You may go into the fields or down the lane, but don't go into Mr. McGregor's garden.\n\nYour father had an accident there; he was put in a pie by Mrs. McGregor.\"\n\nNow run along and don't get into mischief. I am going out.\"\n\n Then old Mrs. Rabbit took a basket and her umbrella and went through the wood to the baker's.",
       "prompt": "Do you want to hear about flopsy or about peter?",
       "image": {
         "largeImageUrl": null,
@@ -41,7 +41,7 @@
       }
     },
     "voice": {
-      "intro": "Once upon a time there were four little rabbits, and their names were Flopsy, Mopsy, Cotton-tail and Peter. They lived with their mother in a sand-bank, underneath the root of a very big fir tree.<break time=\"500ms\"/>\"Now, my dears,\" said old Mrs. Rabbit one morning, \"You may go into the fields or down the lane, but don't go into Mr. McGregor's garden.<break time=\"500ms\"/>Your father had an accident there; he was put in a pie by Mrs. McGregor.\"<break time=\"1000ms\"/><break time=\"500ms\"/>Now run along and don't get into mischief. I am going out.\"<break time=\"500ms\"/>Then old Mrs. Rabbit took a basket and her umbrella and went through the wood to the baker's.",
+      "intro": "<audio src=\"https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/audio/forestintro.mp3\" /> <p>Once upon a time there were four little rabbits, and their names were Flopsy, Mopsy, Cotton-tail and Peter.</p><p> They lived with their mother in a sand-bank, underneath the root of a very big fir tree.</p><p>\"Now, my dears,\" said old Mrs. Rabbit one morning, \"You may go into the fields or down the lane, but don't go into Mr. McGregor's garden.<break time=\"500ms\"/>Your father had an accident there; he was put in a pie by Mrs. McGregor.\"<break time=\"500ms\"/>Now run along and don't get into mischief. I am going out.\"</p><p>Then old Mrs. Rabbit took a basket and her umbrella and went through the wood to the baker's.</p>",
       "prompt": "Do you want to hear about flopsy or about peter?"
     },
     "options": [
@@ -67,8 +67,8 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Peter goes to the garden",
-      "text": "Now Peter who was very naughty, ran straight away to Mr. McGregor's\ngarden and squeezed under the gate!\n\nHe saw a huge amount of juicy vegetables growing - lettuces, radishes and cabbages. He didn't know where to start! Could you help him decide?",
-      "prompt": "",
+      "text": "Now Peter who was very naughty, ran straight away to Mr. McGregor's garden and squeezed under the gate!\n\nHe saw a huge amount of juicy vegetables growing - lettuces, radishes and cabbages. He didn't know where to start! Could you help him decide?",
+      "prompt": "Which should he eat - lettuces, radishes, or cabbages?",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": "https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/img/peter19.jpg"
@@ -76,25 +76,31 @@
     },
     "voice": {
       "intro": "Now Peter who was very naughty, ran straight away to Mr. McGregor's\ngarden and squeezed under the gate!\n\n<break time=\"500ms\"/>He saw a huge amount of juicy vegetables growing - lettuces, radishes and cabbages. He didn't know where to start! Could you help him decide?",
-      "prompt": ""
+      "prompt": "Which should he eat - lettuces, radishes, or cabbages?"
     },
     "options": [
       {
         "sceneId": 4,
         "utterances": [
-          "lettuces"
+          "lettuces",
+          "he should eat lettuces",
+          "the lettuces"
         ]
       },
       {
         "sceneId": 5,
         "utterances": [
-          "radishes"
+          "radishes",
+          "he should eat radishes",
+          "the radishes"
         ]
       },
       {
         "sceneId": 6,
         "utterances": [
-          "cabbages"
+          "cabbages",
+          "the cabbages",
+          "he should eat the cabbages"
         ]
       }
     ]
@@ -107,7 +113,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Flopsy, Mopsy and Cotton-tail",
-      "text": "Flopsy, Mopsy and Cotton-tail who were good little bunnies went down the lane together to gather blackberries. Flopsy was the biggest, so she carried the basket.\n Little Cotton-tail could only reach the lowest blackberries, but he was very good at squeezing into the small spaces in the bushes, so between them they collected a big basketful.",
+      "text": "Flopsy, Mopsy and Cotton-tail who were good little bunnies went down the lane together to gather blackberries. Flopsy was the biggest, so she carried the basket.\n Little Cotton-tail could only reach the lowest blackberries, but she was very good at squeezing into the small spaces in the bushes, so between them they collected a big basketful.",
       "prompt": "Would you like to hear about Peter now?",
       "image": {
         "largeImageUrl": null,
@@ -115,7 +121,7 @@
       }
     },
     "voice": {
-      "intro": "Flopsy, Mopsy and Cotton-tail who were good little bunnies went down the lane together to gather blackberries. Flopsy was the biggest, so she carried the basket. Little Cotton-tail could only reach the lowest blackberries, but he was very good at squeezing into the small spaces in the bushes, so between them they collected a big basketful.",
+      "intro": "Flopsy, Mopsy and Cotton-tail who were good little bunnies went down the lane together to gather blackberries. Flopsy was the biggest, so she carried the basket. Little Cotton-tail could only reach the lowest blackberries, but she was very good at squeezing into the small spaces in the bushes, so between them they collected a big basketful.",
       "prompt": "Would you like to hear about Peter now?"
     },
     "options": [
@@ -125,6 +131,12 @@
           "yes"
         ],
         "type": "virtual"
+      },
+      {
+        "sceneId": 23,
+        "utterances": [
+          "no"
+        ]
       }
     ]
   },
@@ -137,7 +149,7 @@
     "card": {
       "title": "Peter eats some lettuces",
       "text": "Peter first hopped over to the lettuces and sniffed them with his little rabbit nose. They smelt so fresh! He crunched his teeth into them and gobbled down a whole lettuce.\n\nOnce he had had his fill, he spotted over at the other side of the garden a patch of other vegetables.",
-      "prompt": "Which one do you think he should hop over to first - radishes or cabbages?",
+      "prompt": "Which one do you think he should hop over to next - radishes or cabbages?",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": "https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/img/peter23.jpg"
@@ -172,22 +184,29 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Peter eats some radishes",
-      "text": "Peter hopped over to the radishes - they were perfectly ripe! Peter started nibbling them, then eating faster, until he had finished two whole radishes\n\nWhen he was full, he spotted some cabbages in the neighbouring patch.",
-      "prompt": "Do you think he should go and test those, too?",
+      "text": "Peter hopped over to the radishes - they were perfectly ripe! Peter started nibbling them, then eating faster, until he had finished two whole radishes\n\nWhen he was full, he spotted some other vegetables.",
+      "prompt": "Which one do you think he should hop over to next - lettuces or cabbages?",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": "https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/img/peter20.jpg"
       }
     },
     "voice": {
-      "intro": "Peter hopped over to the radishes - they were perfectly ripe! Peter started nibbling them, then eating faster, until he had finished two whole radishes\n\nWhen he was full, he spotted some cabbages in the neighbouring patch, so hopped over to them.",
-      "prompt": "Shall we see what happened next?"
+      "intro": "Peter hopped over to the radishes - they were perfectly ripe! Peter started nibbling them, then eating faster, until he had finished two whole radishes\n\nWhen he was full, he spotted some other vegetables.",
+      "prompt": "Which one do you think he should hop over to next - lettuces or cabbages?"
     },
     "options": [
       {
         "sceneId": 6,
         "utterances": [
-          "yes"
+          "cabbages"
+        ],
+        "type": "virtual"
+      },
+      {
+        "sceneId": 4,
+        "utterances": [
+          "lettuces"
         ],
         "type": "virtual"
       }
@@ -201,7 +220,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Peter eats some cabbages",
-      "text": "Peter hopped up to the cabbages and tucked in! He ate a whole cabbage - a big meal for such a little rabbit! Peter felt satisfied. His belly was so full, as he hopped around the garden.\n\nBut round the end of a cabbage patch, whom should he meet but Mr. McGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages,\nbut he jumped up and ran after Peter, waving a rake and calling out\n\"Stop thief!\"",
+      "text": "Peter hopped up to the cabbages and tucked in!  He ate a whole cabbage - a big meal for such a little rabbit! Peter felt satisfied. His belly was so full, as he hopped around the garden.\n\nBut round the end of a cabbage patch, whom should he meet but Mr. McGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages,\nbut he jumped up and ran after Peter, waving a rake and calling out\n\"Stop thief!\"",
       "prompt": "Should Peter make a run for it?",
       "image": {
         "largeImageUrl": null,
@@ -209,8 +228,8 @@
       }
     },
     "voice": {
-      "intro": "Peter hopped up to the cabbages and tucked in! He ate a whole cabbage - a big meal for such a little rabbit!\nPeter felt satisfied. His belly was so full, as he hopped around the garden.\n\nBut round the end of a cabbage patch, whom should he meet but Mr.\nMcGregor!\n\n<break time=\"1000ms\"/>Mr. McGregor was on his hands and knees planting out young cabbages,\nbut he jumped up and ran after Peter, waving a rake and calling out\n\"Stop! thief!\"",
-      "prompt": "Should Peter should make a run for it?"
+      "intro": "Peter hopped up to the cabbages and tucked in! <audio src=\"https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/audio/eating.mp3\" /> He ate a whole cabbage - a big meal for such a little rabbit!\nPeter felt satisfied. His belly was so full, as he hopped around the garden.\n\nBut round the end of a cabbage patch, whom should he meet but Mr.\nMcGregor!\n\n<break time=\"1000ms\"/>Mr. McGregor was on his hands and knees planting out young cabbages,\nbut he jumped up and ran after Peter, waving a rake and calling out\n\"Stop! Thief!\"",
+      "prompt": "Should Peter make a run for it?"
     },
     "options": [
       {
@@ -322,6 +341,13 @@
         "sceneId": 7,
         "utterances": [
           "yes"
+        ],
+        "type": "virtual"
+      },
+      {
+        "sceneId": 9,
+        "utterances": [
+          "no"
         ],
         "type": "virtual"
       }
@@ -518,6 +544,13 @@
           "yes"
         ],
         "type": "virtual"
+      },
+      {
+        "sceneId": 14,
+        "utterances": [
+          "no"
+        ],
+        "type": "virtual"
       }
     ]
   },
@@ -537,7 +570,7 @@
       }
     },
     "voice": {
-      "intro": "Peter was trying desperately to hold his sneeze in. After a whole minute, peter could not hold his sneeze in any longer. Achoo! Mr. McGregor was after him in no time, and tried to put his foot upon Peter, who jumped out of a window, upsetting three plants.<break time=\"200ms\"/> The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.<break time=\"1000ms\"/> Peter sat down to rest; he was out of breath and trembling with fright, and he had not the least idea which way to go.<break time=\"100ms\"/> Also he was very damp with sitting in that can.  After a time he began to wander about, hopping not very fast, and looking all round. Peter saw a door in the garden wall.",
+      "intro": "Peter was trying desperately to hold his sneeze in. After a whole minute, peter could not hold his sneeze in any longer. <audio src=\"https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/audio/sneeze.mp3\" /> Mr. McGregor was after him in no time, and tried to put his foot upon Peter, who jumped out of a window, upsetting three plants.<break time=\"200ms\"/> The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.<break time=\"1000ms\"/> Peter sat down to rest; he was out of breath and trembling with fright, and he had not the least idea which way to go.<break time=\"100ms\"/> Also he was very damp with sitting in that can.  After a time he began to wander about, hopping not very fast, and looking all round. Peter saw a door in the garden wall.",
       "prompt": "Should Peter try the door in the wall, go across the garden, or go back to the tool shed?"
     },
     "options": [
@@ -589,7 +622,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Peter sneezes",
-      "text": "Presently Peter sneezed—'Kertyschoo!' Mr. McGregor was after him in no time, and tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work. \n\n Peter sat down to rest; he was out of breath and trembling with fright, and he had not the least idea which way to go. Also he was very damp with sitting in that can. After a time he began to wander about, going lippity—lippity—not very fast, and looking all round. ",
+      "text": "Presently Peter sneezed—'A-choo!' Mr. McGregor was after him in no time, and tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work. \n\n Peter sat down to rest; he was out of breath and trembling with fright, and he had not the least idea which way to go. Also he was very damp with sitting in that can. After a time he began to wander about, going lippity—lippity—not very fast, and looking all round. ",
       "prompt": "Should peter try the door in the wall, go across the garden, or go back to the tool shed?",
       "image": {
         "largeImageUrl": null,
@@ -597,7 +630,7 @@
       }
     },
     "voice": {
-      "intro": "Presently Peter sneezed—'Kertyschoo!' Mr. McGregor was after him in no time, and tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.<break time=\"1000ms\"/> \n\n Peter sat down to rest; he was out of breath and trembling with fright, and he had not the least idea which way to go. Also he was very damp with sitting in that can. After a time he began to wander about, going lippity—lippity—not very fast, and looking all round. ",
+      "intro": "Presently Peter sneezed. <audio src=\"https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/audio/sneeze.mp3\" /> Mr. McGregor was after him in no time, and tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.<break time=\"1000ms\"/> \n\n Peter sat down to rest; he was out of breath and trembling with fright, and he had not the least idea which way to go. Also he was very damp with sitting in that can. After a time he began to wander about, going lippity—lippity—not very fast, and looking all round. ",
       "prompt": "Should peter try the door in the wall, go across the garden, or go back to the tool shed?"
     },
     "options": [
@@ -691,22 +724,42 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Peter encounters a cat",
-      "text": "Peter tried to find his way straight across the garden, but he became more and more puzzled. Presently, he came to a pond where Mr. McGregor filled his water-cans. A white cat was staring at some gold-fish, she sat very, very still, but now and then the tip of her tail twitched as if it were alive.\n Peter thought it best to go away without speaking to her; he had heard about cats from his cousin, little Benjamin Bunny. He decided he best head back to the tool shed to get his bearings. Shall we see what happened next?",
-      "prompt": "Shall we see what happened next?",
+      "text": "Peter tried to find his way straight across the garden, but he became more and more puzzled. Presently, he came to a pond where Mr. McGregor filled his water-cans. A white cat was staring at some gold-fish, she sat very, very still, but now and then the tip of her tail twitched as if it were alive.\n Peter thought it best to go away without speaking to her; he had heard about cats from his cousin, little Benjamin Bunny.",
+      "prompt": "Should Peter try the door in the wall, or go back to the tool shed?",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": "https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/img/peter47.jpg"
       }
     },
     "voice": {
-      "intro": "Peter tried to find his way straight across the garden, but he became more and more puzzled. Presently, he came to a pond where Mr. McGregor filled his water-cans. A white cat was staring at some gold-fish, she sat very, very still, but now and then the tip of her tail twitched as if it were alive. Peter thought it best to go away without speaking to her; he had heard about cats from his cousin, little Benjamin Bunny. He decided he best head back to the tool shed to get his bearings.",
-      "prompt": "Shall we see what happened next?"
+      "intro": "Peter tried to find his way straight across the garden, but he became more and more puzzled. Presently, he came to a pond where Mr. McGregor filled his water-cans. A white cat was staring at some gold-fish, she sat very, very still, but now and then the tip of her tail twitched as if it were alive. Peter thought it best to go away without speaking to her; he had heard about cats from his cousin, little Benjamin Bunny.",
+      "prompt": "Should Peter try the door in the wall, or go back to the tool shed?"
     },
     "options": [
       {
         "sceneId": 19,
         "utterances": [
-          "yes"
+          "tool shed",
+          "the tool shed",
+          "back to the tool shed",
+          "go back to the tool shed",
+          "head back to the tool shed",
+          "head to the tool shed"
+        ],
+        "type": "virtual"
+      },
+      {
+        "sceneId": 17,
+        "utterances": [
+          "door",
+          "the door",
+          "the door in the wall",
+          "the door in the garden wall",
+          "try the door in the wall",
+          "try the door in the garden wall",
+          "try to open the door",
+          "try to open the door in the wall",
+          "try to open the door in the garden wall"
         ],
         "type": "virtual"
       }
@@ -819,9 +872,45 @@
       }
     },
     "voice": {
-      "intro": "He was so tired that he flopped down upon the nice soft sand on the floor of the rabbit-hole and shut his eyes. His mother was busy cooking; she wondered what he had done with his clothes. It was the second little jacket and pair of shoes that Peter had lost in a fortnight! <break time=\"1000ms\"/> I am sorry to say that Peter was not very well during the evening.  His mother put him to bed, and made some camomile tea; and she gave a dose of it to Peter!  'One table-spoonful to be taken at bed-time. <break time=\"500ms\"/> But Flopsy, Mopsy, and Cotton-tail had bread and milk and blackberries for supper. <break time=\"2000ms\"/> The End.<break time=\"2000ms\"/>'",
+      "intro": "He was so tired that he flopped down upon the nice soft sand on the floor of the rabbit-hole and shut his eyes. His mother was busy cooking; she wondered what he had done with his clothes. It was the second little jacket and pair of shoes that Peter had lost in a fortnight! <break time=\"1000ms\"/> I am sorry to say that Peter was not very well during the evening.  His mother put him to bed, and made some camomile tea; and she gave a dose of it to Peter!  'One table-spoonful to be taken at bed-time. <break time=\"500ms\"/> But Flopsy, Mopsy, and Cotton-tail had bread and milk and blackberries for supper. <audio src=\"https://s3.eu-west-2.amazonaws.com/int-irfs-interactive-story/peter_rabbit/audio/forestout.mp3\" /> <break time=\"2000ms\"/> The End.<break time=\"2000ms\"/>'",
       "prompt": "You can say goodbye to finish, or start again to read from the beginning."
     },
     "options": []
+  },
+  {
+    "id": 23,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "More about Flopsy, Mopsy and Cotton-Tail",
+      "text": "I don't have anything else to say about Flopsy, Mopsy and Cotton-tail. They spent the whole day picking blackerries.",
+      "prompt": "Would you like to hear about what Peter got up to?",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "I don't have anything else to say about Flopsy, Mopsy and Cotton-tail. They spent the whole day picking blackerries.",
+      "prompt": "Would you like to hear about what Peter got up to?"
+    },
+    "options": [
+      {
+        "sceneId": 2,
+        "utterances": [
+          "yes"
+        ],
+        "type": "virtual"
+      },
+      {
+        "sceneId": 23,
+        "utterances": [
+          "no"
+        ],
+        "type": "virtual"
+      }
+    ]
   }
 ]
