@@ -46,7 +46,7 @@ YesIntent yes
 YesIntent yes
 NoIntent no
 YesIntent yes
-NoIntent No
+NoIntent no
 CryForHelpIntent cry for help
 CryForHelpIntent cry for someone
 WriggleFreeIntent wriggle free

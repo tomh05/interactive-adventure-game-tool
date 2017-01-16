@@ -6,6 +6,12 @@ var dynamo = require('./dynamoDB')
 module.exports = {
 
   readSceneWithCard: function ( scene, session, response ) {
+       if (scene.isEndScene == true) {
+           session.attributes.breadcrumbs = []
+           delete session.attributes.isAskingToRestoreState
+       } 
+
+
     var json = buildResponse( scene )
     dynamo.putUserState( session, function ( data ) {
       console.log( data.message )

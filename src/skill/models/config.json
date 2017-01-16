@@ -53,9 +53,10 @@
         }
       },
       "voice": {
-        "intro": "I have found your previous saved progress.",
-        "prompt": "To continue from where you left off, say \"Resume\". Otherwise, say \"start from the beginning\"."
-      }
+        "intro": "",
+        "prompt": "Would you like to \"Resume\" or \"start from the beginning\"?"
+      },
+      "isEndScene": false
     },
     "unrecognized": {
       "color": "default",
@@ -74,7 +75,8 @@
       "voice": {
         "intro": "Sorry, I didn't understand what you said. Please say again.",
         "prompt": ""
-      }
+      },
+      "isEndScene": false
     },
     "help": {
       "color": "default",
@@ -83,7 +85,7 @@
       "readPreviousOptions": false,
       "card": {
         "title": "Help",
-        "text": "I understand you need some help. At any time you can issue the following commands. To hear your options again, say \"repeat options.\" To hear the entire scene again, say \"repeat scene.\" In order to revisit the previous scene, say \"go back.\" To skip past the current scene description, say \"skip.\" To start the game over, say \"start again.\" At any time, to hear these commands again, say \"help\".",
+        "text": "Help Guide\n------------\nYou can say:\nRepeat options\nRepeat scene\nGo back\nSkip (to skip current scene)\nStart again",
         "prompt": "",
         "image": {
           "largeImageUrl": null,
@@ -91,9 +93,10 @@
         }
       },
       "voice": {
-        "intro": "I understand you need some help. At any time you can issue the following commands. To hear your options again, say \"repeat options.\" To hear the entire scene again, say \"repeat scene.\" In order to revisit the previous scene, say \"go back.\" To skip past the current scene description, say \"skip.\" To start the game over, say \"start again.\" At any time, to hear these commands again, say \"help\".",
+        "intro": "To hear your options again, say \"repeat options.\" To hear the scene again, say \"repeat scene.\" You can say \"go back\" or \"skip\"  or \"start again\"",
         "prompt": "Now, what would you like to do?"
-      }
+      },
+      "isEndScene": false
     },
     "exit": {
       "color": "default",

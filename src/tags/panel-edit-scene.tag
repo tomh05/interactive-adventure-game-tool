@@ -122,6 +122,36 @@
       </div>
     </div>
 
+    <div class="input-row">
+      <label for="$isEndScene">
+        End Scene
+      </label>
+      <div class="radio-set">
+        <span class="radio-button">
+          <input type="radio"
+                 value="true"
+                 name="$inputIsEndScene"
+                 id="$inputIsEndSceneTrue"
+                 onchange={ parent.save }
+                 checked={ parent.scene.isEndScene === true }>
+          <label for="$inputIsEndSceneTrue">
+            Yes
+          </label>
+        </span>
+        <span class="radio-button">
+          <input type="radio"
+                 value="false"
+                 name="$inputIsEndScene"
+                 id="$inputIsEndSceneFalse"
+                 onchange={ parent.save }
+                 checked={ parent.scene.isEndScene === false  }>
+          <label for="$inputIsEndSceneTrue">
+            No
+          </label>
+        </span>
+      </div>
+    </div>
+
   </collapsible>
 
   <div class="tabs">
@@ -228,6 +258,8 @@
           </small>
         </p>
       </div>
+
+
 
     </collapsible>
 
@@ -394,6 +426,7 @@
 
       this.scene.color               = $colorSelection ? $colorSelection.value : 'default'
       this.scene.isHidden            = ( $advanced.$inputIsHiddenTrue.checked )
+      this.scene.isEndScene            = ( $advanced.$inputIsEndSceneTrue.checked )
       this.scene.readPreviousOptions = ( $advanced.$inputReadPreviousOptionsTrue.checked )
 
       this.scene.voice = {

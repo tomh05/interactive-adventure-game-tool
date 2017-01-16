@@ -183,6 +183,7 @@ this.onClickDestination = e => {
         id: sceneId,
         color: 'default',
         isHidden: false,
+        isEndScene: false,
         generateOptions: true,
         readPreviousOptions: false,
         card: {
