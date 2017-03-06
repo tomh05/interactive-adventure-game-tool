@@ -58,17 +58,25 @@ var defaultIntentHandlers = {
   "UnrecognizedIntent": function ( intent, session, request, response ) {
     var scene
     var unrecognized = utils.findResponseByType('unrecognized')
+
     if ( session.attributes.isAskingToRestoreState ) {
       scene = utils.findResponseByType('askToRestoreState')
       unrecognized.voice.prompt = scene.voice.prompt
-    }
-    else {
+    } else {
       scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
-      unrecognized.generateOptions = scene.generateOptions
-      unrecognized.voice.prompt = scene.voice.prompt
-      unrecognized.options = scene.options
+      // Check if scene has a default action
+      if (typeof(scene.defaultOption) !== 'undefined' && scene.defaultOption > -1) {
+        session.attributes.currentSceneId = parseInt(scene.defaultOption)
+        console.log("unrecognised intent - selecting default option")
+        var newScene = utils.findResponseBySceneId( session.attributes.currentSceneId )
+        respond.readSceneWithCard( newScene, session, response )
+      } else {
+        unrecognized.generateOptions = scene.generateOptions
+        unrecognized.voice.prompt = scene.voice.prompt
+        unrecognized.options = scene.options
+        respond.readSceneWithCard( unrecognized, session, response )
+      }
     }
-    respond.readSceneWithCard( unrecognized, session, response )
   },
 
   "ResetStateIntent": function ( intent, session, request, response ) {

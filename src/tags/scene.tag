@@ -184,6 +184,7 @@ this.onClickDestination = e => {
         color: 'default',
         isHidden: false,
         isEndScene: false,
+        defaultOption: -1,
         generateOptions: true,
         readPreviousOptions: false,
         card: {

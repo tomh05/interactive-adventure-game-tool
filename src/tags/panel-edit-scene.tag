@@ -152,6 +152,23 @@
       </div>
     </div>
 
+
+    <div class="input-rowand ">
+      <label for="$inputDefaultOption">
+        Default Option
+      </label>
+        <div class="select-dropdown">
+    <select
+                 name="$inputDefaultOption"
+                 id="$inputDefaultOptionSelect"
+                 onchange={ parent.save }
+                 value={ parent.scene.defaultOption }>
+          <option value="-1">(none)</option>
+          <option each={parent.scene.options} value="{sceneId}">{utterances[0]}</option>
+          </select>
+          </div>
+    </div>
+
   </collapsible>
 
   <div class="tabs">
@@ -428,6 +445,8 @@
       this.scene.isHidden            = ( $advanced.$inputIsHiddenTrue.checked )
       this.scene.isEndScene            = ( $advanced.$inputIsEndSceneTrue.checked )
       this.scene.readPreviousOptions = ( $advanced.$inputReadPreviousOptionsTrue.checked )
+      this.scene.defaultOption = ( $advanced.$inputDefaultOptionSelect.value )
+      console.log("set detault option to",this.scene.defaultOption)
 
       this.scene.voice = {
         intro: this.$intro.value.trim(),
