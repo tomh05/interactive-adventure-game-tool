@@ -5,25 +5,39 @@ var dynamo = require('./dynamoDB')
 
 module.exports = {
 
-  readSceneWithCard: function ( scene, session, response ) {
-       if (scene.isEndScene == true) {
-           session.attributes.breadcrumbs = []
-           delete session.attributes.isAskingToRestoreState
-       } 
+    readSceneWithCard: function ( scene, session, response ) {
+        // exit without prompt if end scene
+        if (scene.isEndScene == true) {
+            session.attributes.breadcrumbs = []
+                delete session.attributes.isAskingToRestoreState
+
+                var json = buildResponse( scene )
+                dynamo.putUserState( session, function ( data ) {
+                    console.log( data.message )
+                        response.tellWithCard(
+                                json.speechOutput,
+                                json.cardTitle,
+                                json.cardOutput,
+                                json.cardImage
+                                )
+                })
 
 
-    var json = buildResponse( scene )
-    dynamo.putUserState( session, function ( data ) {
-      console.log( data.message )
-      response.askWithCard(
-        json.speechOutput,
-        json.repromptOutput,
-        json.cardTitle,
-        json.cardOutput,
-        json.cardImage
-      )
-    })
-  },
+        } else {
+
+            var json = buildResponse( scene )
+                dynamo.putUserState( session, function ( data ) {
+                    console.log( data.message )
+                        response.askWithCard(
+                                json.speechOutput,
+                                json.repromptOutput,
+                                json.cardTitle,
+                                json.cardOutput,
+                                json.cardImage
+                                )
+                })
+        }
+    },
 
   exitWithCard: function ( scene, session, response ) {
     var json = buildResponse( scene )
@@ -52,8 +66,8 @@ function buildResponse ( scene ){
       type: AlexaSkill.SPEECH_OUTPUT_TYPE.SSML,
       ssml: '<speak>' +
             scene.voice.intro.trim() +
-            '<break time="300ms"/>' +
-            voicePrompt +
+            //'<break time="300ms"/>' +
+            //voicePrompt +
             '</speak>'
     },
 
@@ -61,7 +75,7 @@ function buildResponse ( scene ){
     repromptOutput: {
       type: AlexaSkill.SPEECH_OUTPUT_TYPE.SSML,
       ssml: '<speak>' +
-            'I\'m sorry.<break time="200ms"/>' +
+            //'I\'m sorry.<break time="200ms"/>' +
             voicePrompt +
             '</speak>'
     },
