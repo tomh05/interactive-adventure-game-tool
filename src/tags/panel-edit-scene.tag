@@ -324,7 +324,7 @@
 
     <div class="input-row">
       <label for="$voicePrompt">
-        Override Default Prompt
+        Reprompt
         <small>(Optional)</small>
       </label>
       <autogrow-textarea
